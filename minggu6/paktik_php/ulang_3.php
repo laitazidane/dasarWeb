@@ -4,8 +4,10 @@
 	</head>
 	<body>
 		<?php
-			for($i = 0; $i < 10; $i++){
-				echo "Anda urutan ke- $i <br>";
+		$coba = 0;
+			while($coba < 10){
+				echo "Anda urutan ke- $coba <br>";
+				$coba++;
 			}	
 		?>
 	</body>
