@@ -1,9 +1,9 @@
 <?php 
     $name = "mahasiswa";
-    $value = "Tulis nama kalian";
+    $value = "Laita Zidan";
     setcookie($name, $value, time()+600);
 
-    setcookie("kelas","tulis kelas kalian", time()+3600);
+    setcookie("kelas","MI-1F", time()+3600);
  ?>
  <html>
      <body>
