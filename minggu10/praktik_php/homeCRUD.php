@@ -10,12 +10,14 @@
    <a href="insertForm.html">
     <input type="button" value="Tambah Data">
    </a><br><br>
-   
+
    <table>
        <tr>
            <th> ID </th>
            <th> Nama </th>
            <th> Alamat </th>
+           <th> Foto </th>
+           <th> Aksi </th>
        </tr>
        <?php
 
@@ -31,6 +33,13 @@
             <td><?php echo $row["id"] ?></td>
             <td><?php echo $row["name"] ?></td>
             <td><?php echo $row["address"] ?></td>
+            <td> <img src="<?php echo $row["foto"]; ?>" alt="" width="100px"></td>
+            <td>
+                <a href="editForm.php?id=<?php echo $row["id"]; ?>">
+                <button>Edit</button></a>
+                <a href="delete.php?id=<?php echo $row["id"]; ?>">
+                <button>Hapus</button></a>
+            </td>
         </tr>
         <?php  
                 }
