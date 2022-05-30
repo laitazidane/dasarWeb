@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+
+
+/* navbar */
+
+  .navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    position: sticky;
+    left: 35%;
+    
+  }
+  
+  .navbar li + li {
+    margin-left: 30px;
+    
+  }
+  
+  .navbar a {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  .navbar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active > a:before {
+    visibility: visible;
+    width: 30px;
+  }
+  
+  .navbar a:hover, .navbar .active > a, .navbar li:hover > a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .d-flex{
+      padding: 10px 20px;
+      height: 50px;      
+  }
+
+  .form-control input:focus{
+    border: #18d26e;
+  }
+
+  /* end navbar */
+
+  /* jumbotron */
+
+.bg-image{
+  background: #18d26e url('img/CV3.jpg') top right no-repeat; 
+  background-size: cover; 
+  height: 765px;
+  content: "";
+
+  left: 0;
+  right: 0;
+  height: 100vh;
+
+  
+}
+
+ .card-body .btn{
+   background-color: #18d26e;  
+   color: white; 
+ }
+
+  /* jumbotron */
+
+  @media (min-width: 1024px) {
+    body::before {
+      background-attachment: fixed;
+    }
+  }
+  /* About */
+  section{  
+    height: 600px;
+  }
+.about{
+  color: white;
+}
+  .col-sm-12 h3::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    display: inline-block;
+    background: #4ceb95;
+    margin: 4px 10px;
+  }
+
+  .img-fluid{
+    max-width: 100%;
+    width: auto;
+  }
+  /* end About */
+
+  /* Skill */
+  .progress-bar{
+    width: 25%; 
+    height: 16px;
+    background-color: #18d26e;
+  }
+
+  .bg-dark .fs-4{
+    word-spacing: 10px;  
+
+  }
+  /* End Skill */
+
+  /* Contact */
+  .contact{
+
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.form-control:focus{
+  border-color: #4ceb95;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #4ceb95;
+  background-color: #2b2c2c;
+}
+form .form-control{
+  border: 2px solid #18d26e ;
+  background-color: #2b2c2c;
+
+  
+}
+
+form{
+color: white;
+}
+
+
+  /* End Contact */

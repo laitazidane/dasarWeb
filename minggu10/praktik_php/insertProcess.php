@@ -6,15 +6,17 @@
     $foto  = $_FILES['upload']['name'];
     $direktori = "berkasupload/";
     
-    if(isset($_POST['send'])){
+    if(isset($_POST['send'])){ //cek apakah diklik btn tambah
         
-        if(isset($foto)){
+        if(isset($foto)){ //cek apakah berhasil ngambil nama file nya
+            
             $query = "INSERT INTO student(name, address, foto)
                 VALUES('$name','$address','$direktori$foto')";
         
         mysqli_query($connect, $query);
-        move_uploaded_file($_FILES['upload']['tmp_name'], $direktori.$foto);
-        echo "Data baru berhasil ditambahkan";   
+        move_uploaded_file($_FILES['upload']['tmp_name'], $direktori.$foto); 
+        
+        echo basename($_FILES['upload']['name'])." berhasil ditambahkan";   //mengambil nama file dan menampilkannya
         }
         
     }
